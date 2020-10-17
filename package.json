@@ -1,0 +1,23 @@
+{
+  "name": "upgraded-potato",
+  "version": "1.0.0",
+  "description": "weighted quizz with solution display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Not-A-Chatbot/upgraded-potato.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Not-A-Chatbot/upgraded-potato/issues"
+  },
+  "homepage": "https://github.com/Not-A-Chatbot/upgraded-potato#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
