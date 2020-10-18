@@ -8,7 +8,6 @@ export var results = (score) => {
     else return "error";
   };
 
-  //console.log("index of bot", score.indexOf(Math.max(...score)));
 
   for (let i = 0; i < score.length; i++) {
     let botScore = {
