@@ -1,5 +1,6 @@
 export var results = (score) => {
- var results = {};
+ var results = [];
+
 
  var botName = (index) => {
     if (index == 0) return "Alfred";
@@ -8,16 +9,22 @@ export var results = (score) => {
     else return "error"
 }
 
-console.log("index of bot", score.indexOf(Math.max(...score)));
+//console.log("index of bot", score.indexOf(Math.max(...score)));
 
+for (let i = 0; i < score.length; i++) {
+    let botScore = {
+        "bot" : score.indexOf(Math.max(...score)),
+        "botName" : botName(score.indexOf(Math.max(...score))),
+        "score" : Math.max(...score)
+    };
 
-results.firstChoice = {
-    "bot" : score.indexOf(Math.max(...score)),
-    "botName" : botName(score.indexOf(Math.max(...score))),
-    "score" : Math.max(...score)
+    results.push(botScore);
+    score[botScore.bot] = -1;
 }
 
-console.log("podium : ", results , "1st : ", results.firstChoice)
+
+console.log("podium : ", results , "1st : ", results[0])
+return results
 
  }
 
