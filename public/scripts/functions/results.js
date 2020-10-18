@@ -1,32 +1,26 @@
 export var results = (score) => {
- var results = [];
+  var results = [];
 
-
- var botName = (index) => {
+  var botName = (index) => {
     if (index == 0) return "Alfred";
     if (index == 1) return "Jacques";
     if (index == 2) return "Mary";
-    else return "error"
-}
+    else return "error";
+  };
 
-//console.log("index of bot", score.indexOf(Math.max(...score)));
+  //console.log("index of bot", score.indexOf(Math.max(...score)));
 
-for (let i = 0; i < score.length; i++) {
+  for (let i = 0; i < score.length; i++) {
     let botScore = {
-        "bot" : score.indexOf(Math.max(...score)),
-        "botName" : botName(score.indexOf(Math.max(...score))),
-        "score" : Math.max(...score)
+      bot: score.indexOf(Math.max(...score)),
+      botName: botName(score.indexOf(Math.max(...score))),
+      score: Math.max(...score),
     };
 
     results.push(botScore);
     score[botScore.bot] = -1;
-}
+  }
 
-
-console.log("podium : ", results , "1st : ", results[0])
-return results
-
- }
-
-
-
+  console.log("podium : ", results, "1st : ", results[0]);
+  return results;
+};
